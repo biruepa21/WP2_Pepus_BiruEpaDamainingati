@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <a href="<?= base_url('buku'); ?>"><i class="fas fabook fa-3x text-primary"></i></a>
+                            <a href="<?= base_url('buku'); ?>"><i class="fas fa-book fa-3x text-primary"></i></a>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <a href="<?= base_url('user'); ?>"><i class="fas fauser-tag fa-3x text-success"></i></a>
+                            <a href="<?= base_url('user'); ?>"><i class="fas fa-user-tag fa-3x text-success"></i></a>
                         </div>
                     </div>
                 </div>
