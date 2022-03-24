@@ -141,7 +141,7 @@ class Buku extends CI_Controller
 
             $data = [
                 'judul_buku'   => $this->input->post('judul_buku', true),
-                'id_kategori'  => $this->input->post('id_kategori', true),
+                'id'           => $this->input->post('id', true),
                 'pengarang'    => $this->input->post('pengarang', true),
                 'penerbit'     => $this->input->post('penerbit', true),
                 'tahun_terbit' => $this->input->post('tahun', true),
@@ -165,8 +165,8 @@ class Buku extends CI_Controller
 
         $kategori = $this->ModelBuku->joinKategoriBuku(['buku.id' => $this->uri->segment(3)])->result_array();
         foreach ($kategori as $k) {
-            $data['id'] = $k['id_kategori'];
-            $data['k']  = $k['nama_kategori'];
+            $data['id'] = $k['id'];
+            $data['k']  = $k['kategori'];
         }
         $data['kategori'] = $this->ModelBuku->getKategori()->result_array();
  
@@ -175,7 +175,7 @@ class Buku extends CI_Controller
             'min_length' => 'Judul buku terlalu pendek'
         ]);
  
-        $this->form_validation->set_rules('id_kategori', 'Kategori', 'required', [
+        $this->form_validation->set_rules('id', 'Kategori', 'required', [
             'required' => 'Nama pengarang harus diisi',
         ]);
  
@@ -233,7 +233,7 @@ class Buku extends CI_Controller
                 }
                 $data = [
                     'judul_buku' => $this->input->post('judul_buku', true),
-                    'id_kategori' => $this->input->post('id_kategori', true),
+                    'id' => $this->input->post('id', true),
                     'pengarang' => $this->input->post('pengarang', true),
                     'penerbit' => $this->input->post('penerbit', true),
                     'tahun_terbit' => $this->input->post('tahun', true),
