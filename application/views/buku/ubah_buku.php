@@ -17,11 +17,11 @@
                         <input type="text" class="form-control form-control-user" id="judul_buku" name="judul_buku" placeholder="Masukkan Judul Buku">
                     </div>
                         <div class="form-group">
-                            <select name="id_kategori" class="form-control form-control-user">
+                            <select name="id" class="form-control form-control-user">
                                 <option value="">Pilih Kategori</option>
                                 <?php
                                 foreach ($kategori as $k) { ?>
-                                    <option value="<?= $k['id_kategori'];?>"><?= $k['nama_kategori'];?></option>
+                                    <option value="<?= $k['id'];?>"><?= $k['kategori'];?></option>
                                 <?php } ?>
                             </select>
                         </div>

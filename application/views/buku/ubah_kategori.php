@@ -14,7 +14,7 @@
 			    <form action="<?= base_url('buku/kategori'); ?>" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="nama_kategori" name="nama_kategori" placeholder="Masukkan Nama Kategori">
+                        <input type="text" class="form-control form-control-user" id="kategori" name="kategori" placeholder="Masukkan Nama Kategori">
                     </div>
                 </div>
                     <div class="modal-footer">
